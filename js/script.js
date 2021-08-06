@@ -6,6 +6,7 @@ function contar() {
 
     if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
         alert('[ERRO] Faltam dados!')
+        res.innerHTML = 'Imporssível contar!'
 
     } else{
         res.innerHTML = 'Contando: '
@@ -14,6 +15,7 @@ function contar() {
         let p = Number(passo.value)
         
         if (i < f) {
+            // Contagem crescente
             for(let c = i; c <= f; c += p){
                 res.innerHTML += `${c} \u{1F60A} `
             }
